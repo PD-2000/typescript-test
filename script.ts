@@ -1,16 +1,19 @@
 {
-  const persons = [];
+  const persons: string[] = [];
 
-  function addPerson(firstName, lastName) {
-    const name = firstName + lastName;
+  function addPerson(firstName: string, lastName: string) {
+    const name: string = firstName + lastName;
     persons.push(name);
   }
 
-  let firstName = 'John';
-  let lastName = 'Doe';
-  let age = 18;
+  let firstName: string = 'John';
+  let lastName: string = 'Doe';
+  let age: number = 18;
 
-  const person = {
+  const person: {
+    firstName: string,
+    lastName: string
+  } = {
     firstName,
     lastName
   }
