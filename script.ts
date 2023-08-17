@@ -1,8 +1,21 @@
-const btnElem = document.querySelector('.sum-btn') as HTMLButtonElement;
-const numInput = document.querySelector('.num-input') as HTMLInputElement;
+{
+  const persons = [];
 
-function sum(a, b) {
-  console.log(a + b);
+  function addPerson(firstName, lastName) {
+    const name = firstName + lastName;
+    persons.push(name);
+  }
+
+  let firstName = 'John';
+  let lastName = 'Doe';
+  let age = 18;
+
+  const person = {
+    firstName,
+    lastName
+  }
+
+  addPerson(person.firstName, person.lastName);
+  addPerson('Amanda', 'Doe');
+  addPerson('Thomas', 'Jefferson');
 }
-
-btnElem.addEventListener('click', () => {sum(5, numInput.value)});
